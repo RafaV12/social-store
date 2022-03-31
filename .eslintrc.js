@@ -18,6 +18,8 @@ module.exports = {
     'react/prop-types': 'off',
     'no-shadow': 'warn',
     'no-console': 'off',
+    'jsx-a11y/interactive-supports-focus': 'off',
+    'jsx-a11y/control-has-associated-label': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/label-has-associated-control': [
