@@ -2,7 +2,6 @@ import React from 'react';
 import SocialSlider from '../Components/Home/SocialSlider';
 import Recommended from '../Components/Home/Recommended';
 import SocialAccounts from '../Components/Home/SocialAccounts';
-import Footer from '../Components/Footer';
 
 function Home() {
   return (
@@ -10,7 +9,6 @@ function Home() {
       <SocialSlider />
       <Recommended />
       <SocialAccounts />
-      <Footer />
     </div>
   );
 }

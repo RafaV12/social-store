@@ -1,15 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function NavBar() {
+function NavBar({ close }) {
   return (
     <nav
       className="absolute p-4 h-screen w-full left-0 top-0 bg-white z-30 overflow-auto"
     >
       {/* Navigation links */}
       <ul className="mt-9 h-3/5 text-gray-700 text-xl overflow-hidden">
-        <li className="mb-2">
-          Explore
-        </li>
+        <Link to="/" onClick={close}>
+          <li className="mb-2">
+            Explore
+          </li>
+        </Link>
         <li className="mb-2">My profile</li>
         <li className="mb-3">How it works</li>
         <li className="mb-3 text-green-400">

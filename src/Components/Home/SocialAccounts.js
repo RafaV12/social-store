@@ -4,15 +4,19 @@ import Loading from '../Loading';
 
 function SocialAccounts() {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [accounts, setAccounts] = useState([]);
 
   useEffect(() => {
     const getAccounts = () => {
-      fetch('https://fakestoreapi.com/products')
+      fetch('https://dummyjson.com/products')
         .then((res) => res.json())
         .then((json) => {
           setLoading(false);
-          setAccounts(json);
+          setAccounts(json.products);
+        }).catch(() => {
+          setLoading(false);
+          setError(true);
         });
     };
     getAccounts();
@@ -21,6 +25,12 @@ function SocialAccounts() {
   if (loading) {
     return (
       <Loading />
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen">Something went wrong fetching the data...</div>
     );
   }
 
@@ -41,7 +51,7 @@ function SocialAccounts() {
               <div className="px-1 py-3 text-center">
                 <p>{acc.title}</p>
                 <p>{acc.category}</p>
-                <p>{acc.price}</p>
+                <p>{`$${acc.price}`}</p>
                 <p>subs/followers</p>
               </div>
             </div>
