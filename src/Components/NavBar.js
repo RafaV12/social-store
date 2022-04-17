@@ -7,7 +7,7 @@ function NavBar({ close }) {
       className="absolute p-4 h-screen w-full left-0 top-0 bg-white z-30 overflow-auto"
     >
       {/* Navigation links */}
-      <ul className="mt-9 h-3/5 text-gray-700 text-xl overflow-hidden">
+      <ul className="mt-12 h-3/5 text-gray-700 text-xl overflow-hidden">
         <Link to="/" onClick={close}>
           <li className="mb-2">
             Explore
@@ -22,7 +22,7 @@ function NavBar({ close }) {
       </ul>
 
       {/* Navigation socials */}
-      <div className="mt-12 flex flex-col items-center border-t-2 border-gray-100">
+      <div className="w-full flex flex-col items-center border-t-2 border-gray-100">
         <div className="mt-6 w-full flex justify-around text-xl text-gray-500">
           <i className="fa-brands fa-twitter" />
           <i className="fa-brands fa-facebook-square" />
