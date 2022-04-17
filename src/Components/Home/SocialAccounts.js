@@ -6,6 +6,13 @@ function SocialAccounts() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [accounts, setAccounts] = useState([]);
+  const [accsPerPage, setAccsPerPage] = useState(6);
+
+  const showMore = () => {
+    if (accsPerPage < accounts.length) {
+      setAccsPerPage(accsPerPage + 4);
+    }
+  };
 
   useEffect(() => {
     const getAccounts = () => {
@@ -35,12 +42,12 @@ function SocialAccounts() {
   }
 
   return (
-    <div className="mt-7 flex flex-col">
+    <div className="mt-7 py-7 flex flex-col">
       <p className="pl-4 font-semibold text-lg">All ( Social ) Accounts</p>
 
       {/* Accounts for sale container */}
       <div className="self-center mt-5 flex flex-wrap justify-center">
-        {accounts.map((acc) => (
+        {accounts.slice(0, accsPerPage).map((acc) => (
           <Link to={`/account/${acc.id}`} key={acc.id}>
             <div className="m-2 min-h-80 w-44 border rounded-md">
               <img
@@ -61,8 +68,9 @@ function SocialAccounts() {
       <button
         type="button"
         className="py-2.5 px-5 mt-7 mr-2 mb-2 w-11/12 self-center text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+        onClick={showMore}
       >
-        Load more
+        {accsPerPage < accounts.length ? 'Show More' : 'Currently showing All'}
       </button>
     </div>
   );

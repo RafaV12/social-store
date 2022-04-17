@@ -3,7 +3,7 @@ import React from 'react';
 function Recommended() {
   return (
     <div
-      className="mt-7 flex flex-col"
+      className="mt-7 py-7 flex flex-col"
     >
       <p className="pl-4 font-semibold text-lg">Recommended Account</p>
       <div
