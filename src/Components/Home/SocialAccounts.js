@@ -46,16 +46,18 @@ function SocialAccounts() {
       <p className="pl-4 font-semibold text-lg">All ( Social ) Accounts</p>
 
       {/* Accounts for sale container */}
-      <div className="self-center mt-5 flex flex-wrap justify-center">
+      <div className="w-full mt-5 flex justify-center flex-wrap">
         {accounts.slice(0, accsPerPage).map((acc) => (
           <Link to={`/account/${acc.id}`} key={acc.id}>
-            <div className="m-2 min-h-80 w-44 border rounded-md">
+            <div
+              className="m-1 p-3 h-80 w-48 gradient-border overflow-y-hidden"
+            >
               <img
-                className="rounded-t-md"
                 src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 alt=""
+                className="h-40 w-fll"
               />
-              <div className="px-1 py-3 text-center">
+              <div className="mt-2 px-1 text-center">
                 <p>{acc.title}</p>
                 <p>{acc.category}</p>
                 <p>{`$${acc.price}`}</p>

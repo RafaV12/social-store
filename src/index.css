@@ -80,3 +80,8 @@ body {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+
+.gradient-border {
+  border:1px solid;
+  border-image:linear-gradient(45deg,red,rgb(225, 0, 255)) 10;
+}

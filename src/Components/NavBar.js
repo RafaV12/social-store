@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 function NavBar({ close }) {
   return (
     <nav
-      className="absolute p-4 h-screen w-full left-0 top-0 bg-white z-30 overflow-auto"
+      className="fixed top-0 p-4 h-screen w-full left-0 top-0 bg-white z-30 overflow-auto"
     >
+      {/* Close button */}
+      <i role="button" className="fa-solid fa-xmark text-2xl text-gray-700" onClick={close} />
+
       {/* Navigation links */}
-      <ul className="mt-12 h-3/5 text-gray-700 text-xl overflow-hidden">
+      <ul className="mt-10 h-3/5 text-gray-700 text-xl overflow-hidden">
         <Link to="/" onClick={close}>
           <li className="mb-2">
             Explore
@@ -15,10 +18,12 @@ function NavBar({ close }) {
         </Link>
         <li className="mb-2">My profile</li>
         <li className="mb-3">How it works</li>
-        <li className="mb-3 text-green-400">
-          Community
-        </li>
         <li className="mb-2">Suggested</li>
+        <Link to="/signup" onClick={close}>
+          <li className="mb-2 text-green-400">
+            Sign up!
+          </li>
+        </Link>
       </ul>
 
       {/* Navigation socials */}
@@ -33,7 +38,9 @@ function NavBar({ close }) {
         {/* Navigation CTA buttons */}
         <div className="mt-6 w-full flex items-center justify-center">
           <button type="button" className="mr-4 w-2/4 h-12 font-bold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-full">Sell</button>
-          <button type="button" className="w-2/4 h-12 font-bold text-blue-600 bg-blue-200 rounded-full">Sign in</button>
+          <Link to="/login" className="w-2/4" onClick={close}>
+            <button type="button" className="w-full h-12 font-bold text-blue-600 bg-blue-200 rounded-full">Sign in</button>
+          </Link>
         </div>
       </div>
     </nav>

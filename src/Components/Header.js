@@ -7,17 +7,17 @@ function Header() {
   const closeMenu = () => setShowNav(false);
 
   return (
-    <header className="sticky top-0 px-4 h-14 w-full flex items-center justify-between rounded-b-lg bg-white z-10 shadow-md">
+    <header className="px-4 h-14 w-full flex items-center justify-between rounded-b-lg bg-white z-10 shadow-md">
       <i
-        className="fa-solid fa-ellipsis z-40"
+        className="fa-solid fa-ellipsis z-30"
         role="button"
         onClick={() => setShowNav(!showNav)}
       />
       {showNav && <NavBar close={closeMenu} />}
       <Link to="/">
         <img
-          className="ml-6 h-32"
-          src="https://i.ibb.co/GtCNVMN/logo.png"
+          className="ml-6 w-16"
+          src="https://i.ibb.co/4sq2MT6/acclogo.png"
           alt="logo"
         />
       </Link>
