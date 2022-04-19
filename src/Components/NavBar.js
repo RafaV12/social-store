@@ -19,6 +19,16 @@ function NavBar({ close }) {
         <li className="mb-2">My profile</li>
         <li className="mb-3">How it works</li>
         <li className="mb-2">Suggested</li>
+        <Link to="/about" onClick={close}>
+          <li className="mb-2">
+            About
+          </li>
+        </Link>
+        <Link to="/contact" onClick={close}>
+          <li className="mb-2">
+            Contact us
+          </li>
+        </Link>
         <Link to="/signup" onClick={close}>
           <li className="mb-2 text-green-400">
             Sign up!

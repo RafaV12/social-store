@@ -7,7 +7,7 @@ function Header() {
   const closeMenu = () => setShowNav(false);
 
   return (
-    <header className="px-4 h-14 w-full flex items-center justify-between rounded-b-lg bg-white z-10 shadow-md">
+    <header className="absolute top-0 px-4 h-14 w-full flex items-center justify-between z-10">
       <i
         className="fa-solid fa-ellipsis z-30"
         role="button"

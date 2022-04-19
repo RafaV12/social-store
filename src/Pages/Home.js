@@ -7,7 +7,7 @@ import Reviews from '../Components/Home/Reviews';
 
 function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="pt-12 flex flex-col">
       <SocialSlider />
       <Recommended />
       <SocialAccounts />
