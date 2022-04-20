@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       {/* Page Header */}
       <div className="border-2 h-80 flex justify-center items-center bg-gray-700">
         <div className="w-72 text-center text-white">

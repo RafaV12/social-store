@@ -12,7 +12,7 @@ function Contact() {
       </div>
 
       {/* Page Content */}
-      <div className="py-14 px-4 border-2 bg-gray-100 flex flex-col">
+      <div className="py-14 px-4 border-2 flex flex-col">
         <div className="">
           <p className="text-3xl">
             Got a

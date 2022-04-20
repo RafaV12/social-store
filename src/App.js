@@ -7,6 +7,7 @@ import SignUp from './Pages/SignUp';
 import Account from './Pages/Account';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
+import HowItWorks from './Pages/HowItWorks';
 import Footer from './Components/Footer';
 import ScrollToTop from './Components/ScrollToTop';
 
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />

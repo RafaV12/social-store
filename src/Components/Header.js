@@ -9,21 +9,19 @@ function Header() {
   return (
     <header className="absolute top-0 px-4 h-14 w-full flex items-center justify-between z-10">
       <i
-        className="fa-solid fa-ellipsis z-30"
+        className="fa-solid fa-bars z-30 text-xl text-white"
         role="button"
         onClick={() => setShowNav(!showNav)}
       />
-      {showNav && <NavBar close={closeMenu} />}
+
       <Link to="/">
         <img
-          className="ml-6 w-16"
+          className="w-16"
           src="https://i.ibb.co/4sq2MT6/acclogo.png"
           alt="logo"
         />
       </Link>
-      <div className="flex">
-        <i className="mr-3 fa-solid fa-magnifying-glass text-lg" />
-      </div>
+      {showNav && <NavBar close={closeMenu} />}
     </header>
   );
 }

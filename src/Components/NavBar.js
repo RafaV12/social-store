@@ -17,7 +17,11 @@ function NavBar({ close }) {
           </li>
         </Link>
         <li className="mb-2">My profile</li>
-        <li className="mb-3">How it works</li>
+        <Link to="/how-it-works" onClick={close}>
+          <li className="mb-2">
+            How it works
+          </li>
+        </Link>
         <li className="mb-2">Suggested</li>
         <Link to="/about" onClick={close}>
           <li className="mb-2">

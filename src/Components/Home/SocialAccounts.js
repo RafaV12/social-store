@@ -50,7 +50,7 @@ function SocialAccounts() {
         {accounts.slice(0, accsPerPage).map((acc) => (
           <Link to={`/account/${acc.id}`} key={acc.id}>
             <div
-              className="m-1 p-3 h-80 w-48 gradient-border overflow-y-hidden"
+              className="m-1 p-3 h-80 w-48 gradient-border overflow-y-hidden bg-white"
             >
               <img
                 src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
