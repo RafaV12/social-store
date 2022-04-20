@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Images
-const step1 = require('../Assets/About/step-1.png');
-const step2 = require('../Assets/About/step-2.png');
-const step3 = require('../Assets/About/step-3.png');
-const step4 = require('../Assets/About/step-4.png');
-const step5 = require('../Assets/About/step-5.png');
+const step1 = require('../Assets/HowItWorks/step-1.png');
+const step2 = require('../Assets/HowItWorks/step-2.png');
+const step3 = require('../Assets/HowItWorks/step-3.png');
+const step4 = require('../Assets/HowItWorks/step-4.png');
+const step5 = require('../Assets/HowItWorks/step-5.png');
 
 function HowItWorks() {
   return (
