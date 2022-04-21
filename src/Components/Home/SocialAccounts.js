@@ -50,12 +50,12 @@ function SocialAccounts() {
         {accounts.slice(0, accsPerPage).map((acc) => (
           <Link to={`/account/${acc.id}`} key={acc.id}>
             <div
-              className="m-1 p-3 h-80 w-48 gradient-border overflow-y-hidden bg-white"
+              className="m-1 p-3 h-80 w-48 overflow-y-hidden bg-white rounded-lg shadow"
             >
               <img
                 src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 alt=""
-                className="h-40 w-fll"
+                className="h-40 w-full"
               />
               <div className="mt-2 px-1 text-center">
                 <p>{acc.title}</p>
@@ -69,7 +69,7 @@ function SocialAccounts() {
       </div>
       <button
         type="button"
-        className="py-2.5 px-5 mt-7 mr-2 mb-2 w-11/12 self-center text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+        className="py-2.5 px-5 mt-7 mr-2 mb-2 w-11/12 self-center text-sm font-medium text-white focus:outline-none bg-gradient-to-r from-purple-500 to-blue-500 rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
         onClick={showMore}
       >
         {accsPerPage < accounts.length ? 'Show More' : 'Currently showing All'}

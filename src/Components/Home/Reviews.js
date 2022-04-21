@@ -10,15 +10,15 @@ function Reviews() {
           Only don't take our word, see our clients experience with us.
         </p>
         {/* Review submit Form */}
-        <form onSubmit={(e) => e.preventDefault()} className="flex flex-col border-2 p-4">
-          <p className="mb-7">Submit your Review</p>
+        <form onSubmit={(e) => e.preventDefault()} className="p-4 flex flex-col bg-white rounded-lg shadow-md">
+          <p className="mb-7 self-center font-semibold">Submit your Review</p>
           <label htmlFor="name">Name</label>
-          <input type="text" name="name" id="name" />
-          <label htmlFor="email">Email</label>
-          <input type="text" name="email" id="email" />
-          <label htmlFor="review">Review</label>
-          <input type="text" name="review" id="review" />
-          <button className="p-2 bg-blue-400" type="submit">Submit</button>
+          <input type="text" className="p-2 mt-2 h-10 input-bg-color rounded-lg outline-none" name="name" id="name" />
+          <label htmlFor="email" className="mt-4">Email</label>
+          <input type="email" className="p-2 mt-2 h-10 input-bg-color rounded-lg outline-none" name="email" id="email" />
+          <label htmlFor="review" className="mt-4">Review</label>
+          <textarea type="text" className="p-2 mt-2 h-24 input-bg-color rounded-lg outline-none resize-none" name="review" id="review" />
+          <button className="p-2 mt-7 bg-purple-500 rounded-full text-white" type="submit">Submit</button>
         </form>
       </div>
 

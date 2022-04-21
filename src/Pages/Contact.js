@@ -33,14 +33,14 @@ function Contact() {
           </p>
         </div>
 
-        <form onSubmit={(e) => e.preventDefault()} className="mt-7 flex flex-col border-2 p-4">
+        <form onSubmit={(e) => e.preventDefault()} className="mt-7 p-4 flex flex-col">
           <label htmlFor="name">Name</label>
-          <input type="text" name="name" id="name" />
-          <label className="mt-4" htmlFor="email">Email</label>
-          <input type="text" name="email" id="email" />
-          <label className="mt-4" htmlFor="message">Message</label>
-          <textarea className="resize-none" type="text" name="message" id="message" />
-          <button className="mt-7 p-2 bg-blue-400" type="submit">Submit</button>
+          <input type="text" className="p-2 mt-2 h-10 rounded-lg outline-none" name="name" id="name" />
+          <label htmlFor="email" className="mt-4">Email</label>
+          <input type="email" className="p-2 mt-2 h-10 rounded-lg outline-none" name="email" id="email" />
+          <label htmlFor="message" className="mt-4">Message</label>
+          <textarea type="text" className="p-2 mt-2 h-24 rounded-lg outline-none resize-none" name="review" id="review" />
+          <button className="p-2 mt-7 bg-purple-500 rounded-full text-white" type="submit">Submit</button>
         </form>
       </div>
     </div>
