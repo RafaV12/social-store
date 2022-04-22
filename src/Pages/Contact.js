@@ -4,15 +4,21 @@ function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
-      <div className="h-80 flex justify-center items-center bg-gray-700">
-        <div className="w-72 text-center text-white">
+      <div
+        style={{
+          borderBottomRightRadius: '100px',
+          background: '#f0f1ff',
+        }}
+        className="h-80 flex justify-center items-center bg-purple-500"
+      >
+        <div className="w-72 text-center">
           <p className="uppercase font-bold text-4xl">Contact us</p>
           <p className="mt-1 text-sm">Please, contact us if you have any questions. We will get to you within 24hrs.</p>
         </div>
       </div>
 
       {/* Page Content */}
-      <div className="py-14 px-4 border-2 flex flex-col">
+      <div className="py-14 px-4 flex flex-col">
         <div className="">
           <p className="text-3xl">
             Got a

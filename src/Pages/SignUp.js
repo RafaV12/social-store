@@ -17,7 +17,7 @@ function SignUp() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gray-100">
+    <div className="min-h-screen flex flex-col items-center">
       <div style={{ maxWidth: '1300px' }} className="p-8 w-full flex flex-col">
         <p className="mt-8 text-3xl font-bold mb-10">Sign up</p>
 
@@ -74,7 +74,7 @@ function SignUp() {
               disabled={
                 values.password !== values.repeatPassword ? 'disabled' : false
               }
-              className="mt-8 mb-3 h-10 font-bold w-full rounded-lg bg-white border-black border-2"
+              className="mt-8 mb-3 h-10 w-full text-white rounded-full bg-purple-500"
             >
               Sign up
             </button>

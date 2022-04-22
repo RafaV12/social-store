@@ -3,20 +3,17 @@ import React from 'react';
 function Recommended() {
   return (
     <div
-      className="mt-7 py-7 flex flex-col"
+      className="pt-9 pb-5 flex flex-col"
     >
-      <p className="pl-4 font-semibold text-lg">Recommended Account</p>
       <div
         style={{
-          backgroundImage: 'url(\'https://images.pexels.com/photos/1193743/pexels-photo-1193743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\')',
+          backgroundImage: 'url("https://emeraldmedia.pl/wp-content/uploads/2019/09/Success-in-Social-Media-April-7-2016-scaled.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
-        className="py-2 px-3 mt-6 h-32 w-72 self-center rounded-lg"
-      >
-        <p>Account name</p>
-      </div>
+        className="h-32 w-full self-center"
+      />
     </div>
   );
 }

@@ -42,7 +42,7 @@ function SocialAccounts() {
   }
 
   return (
-    <div className="mt-7 py-7 flex flex-col">
+    <div className="py-7 flex flex-col">
       <p className="pl-4 font-semibold text-lg">All ( Social ) Accounts</p>
 
       {/* Accounts for sale container */}

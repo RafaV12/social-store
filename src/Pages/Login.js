@@ -16,7 +16,9 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen flex bg-gray-100">
+    <div
+      className="min-h-screen flex"
+    >
       <div
         style={{ maxWidth: '1300px' }}
         className="p-8 w-full flex flex-col 2xl:items-center 2xl:justify-center"
@@ -53,7 +55,7 @@ function Login() {
 
             <button
               type="submit"
-              className="mt-8 mb-4 h-10 font-bold w-full rounded-lg border-black border-2 bg-white hover:text-white hover:bg-blue-500 transition ease-in hover:border-blue-500 "
+              className="mt-8 mb-4 h-10 w-full text-white rounded-full bg-purple-500"
             >
               Log in
             </button>

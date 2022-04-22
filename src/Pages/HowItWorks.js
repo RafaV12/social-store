@@ -11,8 +11,14 @@ function HowItWorks() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Page Header */}
-      <div className="border-2 h-80 flex justify-center items-center bg-gray-700">
-        <div className="w-72 text-center text-white">
+      <div
+        style={{
+          borderBottomRightRadius: '100px',
+          background: '#f0f1ff',
+        }}
+        className="h-80 flex justify-center items-center"
+      >
+        <div className="w-72 text-center">
           <p className="uppercase font-bold text-4xl">How it Works</p>
           <p className="mt-1 text-sm">There are only 4 easy steps to get your new social media account.</p>
         </div>
@@ -78,7 +84,7 @@ function HowItWorks() {
 
       <div className="p-7 mb-14 w-4/5 h-64 flex flex-col items-center bg-white rounded-lg shadow-md self-center">
         <p className="text-3xl text-center font-semibold">Couldn't find the answer to your question?</p>
-        <button className="mt-6 p-2 w-3/4 border rounded-full" type="button">Contact us</button>
+        <button className="mt-6 px-2 py-3 w-3/4 bg-purple-600 text-white rounded-full" type="button">Contact us</button>
       </div>
     </div>
   );
