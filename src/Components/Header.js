@@ -8,11 +8,16 @@ function Header() {
 
   return (
     <header className="absolute top-0 px-4 h-14 w-full flex items-center justify-between z-10">
-      <i
-        className="fa-solid fa-bars z-30 text-xl text-white"
-        role="button"
-        onClick={() => setShowNav(!showNav)}
-      />
+      <div className="flex items-center">
+        <i
+          className="fa-solid fa-bars z-30 text-xl text-purple-400"
+          role="button"
+          onClick={() => setShowNav(!showNav)}
+        />
+
+        {/* User profile picture */}
+        {/* <i className="ml-4 fa-solid fa-circle-user text-2xl" /> */}
+      </div>
 
       <Link to="/">
         <img

@@ -16,13 +16,21 @@ function NavBar({ close }) {
             Explore
           </li>
         </Link>
-        <li className="mb-2">My profile</li>
+        <Link to="/dashboard" onClick={close}>
+          <li className="mb-2">
+            Dashboard
+          </li>
+        </Link>
+        <Link to="/signup" onClick={close}>
+          <li className="mb-2 text-green-400">
+            Sign up!
+          </li>
+        </Link>
         <Link to="/how-it-works" onClick={close}>
           <li className="mb-2">
             How it works
           </li>
         </Link>
-        <li className="mb-2">Suggested</li>
         <Link to="/about" onClick={close}>
           <li className="mb-2">
             About
@@ -31,11 +39,6 @@ function NavBar({ close }) {
         <Link to="/contact" onClick={close}>
           <li className="mb-2">
             Contact us
-          </li>
-        </Link>
-        <Link to="/signup" onClick={close}>
-          <li className="mb-2 text-green-400">
-            Sign up!
           </li>
         </Link>
       </ul>
