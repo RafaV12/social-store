@@ -2,7 +2,7 @@ import React from 'react';
 
 function TextContent() {
   return (
-    <div className="px-4 py-14">
+    <div className="px-4 py-14 container md:px-7">
       <div>
         <h2 className="text-3xl mb-6">Why buy Social Media accounts from BayOfSales?</h2>
         <p className="mb-4">

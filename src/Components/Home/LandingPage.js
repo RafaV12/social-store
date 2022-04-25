@@ -7,9 +7,9 @@ function LandingPage() {
         borderBottomRightRadius: '100px',
         background: '#f0f1ff',
       }}
-      className="px-10 min-h-screen flex flex-col justify-center"
+      className="px-10 min-h-screen w-full flex flex-col justify-center lg:items-center"
     >
-      <div className="-mt-32">
+      <div className="-mt-32 container">
         <p className="uppercase text-sm font-semibold gradient-text">It's a long established fact</p>
         <h1 className="mt-2 uppercase text-5xl font-semibold">
           The social media store of choice

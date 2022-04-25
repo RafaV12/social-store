@@ -57,8 +57,8 @@ function AccountForm() {
     });
   };
   return (
-    <div>
-      <form className="mt-14 flex flex-col items-center" onSubmit={onSubmit}>
+    <div className="mt-12 container flex justify-center lg:mt-16">
+      <form className="p-2 w-full flex flex-col items-center md:w-2/4" onSubmit={onSubmit}>
         <label htmlFor="image" className="mb-3">
           <b>Account image</b>
         </label>
@@ -83,7 +83,7 @@ function AccountForm() {
           name="title"
           value={values.title}
           onChange={handleChange}
-          className="pl-4 mb-7 h-10 w-full rounded-lg"
+          className="pl-4 mb-7 h-10 w-full rounded-lg outline-none input-bg-color"
           required
         />
 
@@ -93,7 +93,7 @@ function AccountForm() {
         <select
           onChange={handleChange}
           name="category"
-          className="pl-4 mb-7 h-10 w-full rounded-lg"
+          className="pl-4 mb-7 h-10 w-full rounded-lg input-bg-color"
         >
           <option value="Other">Select Account category</option>
           <option value="Tech">Tech</option>
@@ -110,7 +110,7 @@ function AccountForm() {
           name="description"
           value={values.description}
           onChange={handleChange}
-          className="pl-4 mb-7 h-10 w-full rounded-lg"
+          className="pl-4 mb-7 h-10 w-full rounded-lg outline-none input-bg-color"
           placeholder="Enter Account description"
           required
         />
@@ -122,7 +122,7 @@ function AccountForm() {
           name="price"
           value={values.price}
           onChange={handleChange}
-          className="pl-4 mb-9 h-10 w-full rounded-lg"
+          className="pl-4 mb-9 h-10 w-full rounded-lg outline-none input-bg-color"
           placeholder="Enter Account price"
           required
         />

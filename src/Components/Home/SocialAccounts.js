@@ -43,10 +43,10 @@ function SocialAccounts() {
 
   return (
     <div className="py-7 flex flex-col">
-      <p className="pl-4 font-semibold text-lg">All ( Social ) Accounts</p>
+      <p className="pl-4 font-semibold text-lg md:pl-7">All ( Social ) Accounts</p>
 
       {/* Accounts for sale container */}
-      <div className="w-full mt-5 flex justify-center flex-wrap">
+      <div className="w-full container mt-5 flex justify-center flex-wrap md:self-center">
         {accounts.slice(0, accsPerPage).map((acc) => (
           <Link to={`/account/${acc.id}`} key={acc.id}>
             <div
@@ -69,7 +69,7 @@ function SocialAccounts() {
       </div>
       <button
         type="button"
-        className="py-2.5 px-5 mt-7 mr-2 mb-2 w-11/12 self-center text-sm font-medium text-white focus:outline-none bg-gradient-to-r from-purple-500 to-blue-500 rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+        className="py-2.5 px-5 mt-7 mr-2 mb-2 w-11/12 self-center text-sm font-medium text-white focus:outline-none bg-gradient-to-r from-purple-500 to-blue-500 rounded-full md:w-2/4 md:text-base"
         onClick={showMore}
       >
         {accsPerPage < accounts.length ? 'Show More' : 'Currently showing All'}

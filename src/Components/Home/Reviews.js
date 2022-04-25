@@ -2,15 +2,15 @@ import React from 'react';
 
 function Reviews() {
   return (
-    <div className="px-4 pb-14 pt-7 flex flex-col">
-      <div>
+    <div className="px-4 pb-14 pt-7 container flex flex-col md:px-7">
+      <div className="flex flex-col">
         <h2 className="text-3xl mb-6">Customer Reviews</h2>
         <p className="mb-6">
           We are proud of our outstanding service when it comes to selling Instagram accounts.
           Only don't take our word, see our clients experience with us.
         </p>
         {/* Review submit Form */}
-        <form onSubmit={(e) => e.preventDefault()} className="p-4 flex flex-col bg-white rounded-lg shadow-md">
+        <form onSubmit={(e) => e.preventDefault()} className="p-4 flex flex-col self-center bg-white rounded-lg shadow-md md:w-3/5 lg:w-2/4">
           <p className="mb-7 self-center font-semibold">Submit your Review</p>
           <label htmlFor="name">Name</label>
           <input type="text" className="p-2 mt-2 h-10 input-bg-color rounded-lg outline-none" name="name" id="name" />
@@ -23,7 +23,7 @@ function Reviews() {
       </div>
 
       {/* Reviews from Customers */}
-      <div className="p-4 mt-6 h-80 overflow-y-scroll">
+      <div className="p-4 mt-6 h-80 overflow-y-scroll md:self-center">
         <div className="mb-6 flex items-center">
           <img className="mr-4 w-12 h-12 rounded-full" src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-02.jpg" alt="" />
           <p>
