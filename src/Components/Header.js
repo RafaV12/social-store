@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import NavBar from './NavBar';
 
 function Header() {
@@ -21,47 +21,65 @@ function Header() {
       </div>
 
       {/* Destkop Navigation links */}
-      <ul className="hidden md:flex items-center font-semibold w-2/4 justify-around text-gray-600 text-sm">
-        <Link to="/">
+      <ul className="hidden w-2/4 justify-around items-center font-semibold text-gray-600 text-sm md:flex">
+        <NavLink
+          to="/"
+          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+        >
           <li>
             Explore
           </li>
-        </Link>
-        <Link to="/dashboard">
+        </NavLink>
+        <NavLink
+          to="/dashboard"
+          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+        >
           <li>
             Dashboard
           </li>
-        </Link>
-        <Link to="/signup">
-          <li className="text-purple-400">
+        </NavLink>
+        <NavLink
+          to="/signup"
+          className={(isActive) => `${isActive.isActive ? 'text-xl text-blue-400' : 'text-purple-400'}`}
+        >
+          <li>
             Sign up!
           </li>
-        </Link>
-        <Link to="/how-it-works">
+        </NavLink>
+        <NavLink
+          to="/how-it-works"
+          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+        >
           <li>
             How it works
           </li>
-        </Link>
-        <Link to="/about">
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+        >
           <li>
-            About
+            About us
           </li>
-        </Link>
-        <Link to="/contact">
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+        >
           <li>
             Contact us
           </li>
-        </Link>
+        </NavLink>
       </ul>
 
       {/* Logo */}
-      <Link to="/">
+      <NavLink to="/">
         <img
           className="w-16"
           src="https://i.ibb.co/4sq2MT6/acclogo.png"
           alt="logo"
         />
-      </Link>
+      </NavLink>
       {showNav && <NavBar close={closeMenu} />}
     </header>
   );

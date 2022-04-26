@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function NavBar({ close }) {
   return (
@@ -11,36 +11,60 @@ function NavBar({ close }) {
 
       {/* Navigation links */}
       <ul className="mt-10 h-3/5 text-gray-700 text-xl overflow-hidden">
-        <Link to="/" onClick={close}>
+        <NavLink
+          to="/"
+          className={(isActive) => `${isActive.isActive && 'text-2xl text-blue-400'}`}
+          onClick={close}
+        >
           <li className="mb-2">
             Explore
           </li>
-        </Link>
-        <Link to="/dashboard" onClick={close}>
+        </NavLink>
+        <NavLink
+          to="/dashboard"
+          className={(isActive) => `${isActive.isActive && 'text-2xl text-blue-400'}`}
+          onClick={close}
+        >
           <li className="mb-2">
             Dashboard
           </li>
-        </Link>
-        <Link to="/signup" onClick={close}>
-          <li className="mb-2 text-green-400">
+        </NavLink>
+        <NavLink
+          to="/signup"
+          className={(isActive) => `${isActive.isActive ? 'text-2xl text-blue-400' : 'text-green-400'}`}
+          onClick={close}
+        >
+          <li className="mb-2">
             Sign up!
           </li>
-        </Link>
-        <Link to="/how-it-works" onClick={close}>
+        </NavLink>
+        <NavLink
+          to="/how-it-works"
+          className={(isActive) => `${isActive.isActive && 'text-2xl text-blue-400'}`}
+          onClick={close}
+        >
           <li className="mb-2">
             How it works
           </li>
-        </Link>
-        <Link to="/about" onClick={close}>
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={(isActive) => `${isActive.isActive && 'text-2xl text-blue-400'}`}
+          onClick={close}
+        >
           <li className="mb-2">
             About
           </li>
-        </Link>
-        <Link to="/contact" onClick={close}>
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={(isActive) => `${isActive.isActive && 'text-2xl text-blue-400'}`}
+          onClick={close}
+        >
           <li className="mb-2">
             Contact us
           </li>
-        </Link>
+        </NavLink>
       </ul>
 
       {/* Navigation socials */}
@@ -55,9 +79,9 @@ function NavBar({ close }) {
         {/* Navigation CTA buttons */}
         <div className="mt-6 w-full flex items-center justify-center">
           <button type="button" className="mr-4 w-2/4 h-12 font-bold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-full">Sell</button>
-          <Link to="/login" className="w-2/4" onClick={close}>
+          <NavLink to="/login" className="w-2/4" onClick={close}>
             <button type="button" className="w-full h-12 font-bold text-blue-600 bg-blue-200 rounded-full">Sign in</button>
-          </Link>
+          </NavLink>
         </div>
       </div>
     </nav>

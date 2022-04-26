@@ -9,6 +9,7 @@ import Product from './Pages/Product';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
 import HowItWorks from './Pages/HowItWorks';
+import NotFound from './Pages/NotFound';
 import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/account/:id" element={<Product />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
