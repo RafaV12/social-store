@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
-import Account from './Pages/Account';
+import Product from './Pages/Product';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
 import HowItWorks from './Pages/HowItWorks';
@@ -24,7 +24,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/account/:id" element={<Account />} />
+        <Route path="/account/:id" element={<Product />} />
       </Routes>
     </div>
   );

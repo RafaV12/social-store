@@ -10,7 +10,7 @@ function Reviews() {
           Only don't take our word, see our clients experience with us.
         </p>
         {/* Review submit Form */}
-        <form onSubmit={(e) => e.preventDefault()} className="p-4 flex flex-col self-center bg-white rounded-lg shadow-md md:w-3/5 lg:w-2/4">
+        <form onSubmit={(e) => e.preventDefault()} className="p-4 w-11/12 flex flex-col self-center bg-white rounded-lg shadow-md md:w-3/5 lg:w-2/4">
           <p className="mb-7 self-center font-semibold">Submit your Review</p>
           <label htmlFor="name">Name</label>
           <input type="text" className="p-2 mt-2 h-10 input-bg-color rounded-lg outline-none" name="name" id="name" />

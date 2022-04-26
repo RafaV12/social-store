@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import RelatedAccounts from '../Components/Account/RelatedAccounts';
-import HowTo from '../Components/Account/HowTo';
+import RelatedAccounts from '../Components/Product/RelatedAccounts';
+import HowTo from '../Components/Product/HowTo';
 import Loading from '../Components/Loading';
 import Footer from '../Components/Footer';
 
-function Account() {
+function Product() {
   const params = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setErorr] = useState(false);
@@ -66,4 +66,4 @@ function Account() {
   );
 }
 
-export default Account;
+export default Product;
