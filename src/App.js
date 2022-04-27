@@ -10,6 +10,7 @@ import Contact from './Pages/Contact';
 import About from './Pages/About';
 import HowItWorks from './Pages/HowItWorks';
 import NotFound from './Pages/NotFound';
+import ProtectedRoutes from './ProtectedRoutes';
 import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />

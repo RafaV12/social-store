@@ -40,13 +40,21 @@ function Product() {
 
   return (
     <>
-      <div className="pb-14 px-4 pt-12 min-h-screen flex flex-col">
+      <div className="pb-14 px-4 pt-12 min-h-screen flex flex-col md:pt-24 md:px-7 xl:justify-center xl:items-center 2xl:pt-0">
         {/* Account Image */}
         <img
-          className="w-3/5 self-center"
+          className="w-3/5 self-center md:w-2/4 lg:w-2/5 xl:w-1/4"
           src="https://cdn.skedsocial.com/app/uploads/2021/12/03183434/image6.jpg"
           alt=""
         />
+        {/* Photo slider */}
+        <div className="p-2 mt-4 h-20 flex self-center border-2 items-center justify-center rounded-lg">
+          <div className="mr-2 h-full w-16 border-2 bg-gray-200" />
+          <div className="mr-2 h-full w-16 border-2 bg-gray-200" />
+          <div className="mr-2 h-full w-16 border-2 bg-gray-200" />
+          <div className="mr-2 h-full w-16 border-2 bg-gray-200" />
+          <div className="h-full w-16 border-2 bg-gray-200" />
+        </div>
         {/* Account Info */}
         <div className="mt-4 px-1 py-3">
           <p className="text-xl font-semibold">{account.title}</p>
@@ -55,8 +63,8 @@ function Product() {
         </div>
         {/* CTA Buttons */}
         <div className="mt-9 flex flex-col w-full items-center">
-          <button className="p-2 mb-3 w-11/12 text-white bg-purple-500 rounded-full" type="button">Buy Now!</button>
-          <button className="p-2 w-11/12 text-white bg-purple-500 rounded-full" type="button">Make an Offer</button>
+          <button className="p-2 mb-3 w-11/12 text-white bg-purple-500 rounded-full md:w-2/4 lg:w-2/5" type="button">Buy Now!</button>
+          <button className="p-2 w-11/12 text-white bg-purple-500 rounded-full md:w-2/4 lg:w-2/5" type="button">Make an Offer</button>
         </div>
         <HowTo />
         <RelatedAccounts />

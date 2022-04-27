@@ -2,7 +2,7 @@ import React from 'react';
 
 function HowTo() {
   return (
-    <div className="py-6 border-t-2 border-b-2 mt-32">
+    <div className="py-6 mt-24 container border-t-2 border-b-2">
       {/* Step 1 */}
       <div className="mb-7 flex items-center">
         <img className="mr-4 w-20 h-20" src="http://www.clker.com/cliparts/K/W/6/8/z/y/number-one-tech-support-hi.png" alt="number-1" />

@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useGlobalContext } from '../Context/appContext';
 import NavBar from './NavBar';
 
 function Header() {
+  const { user } = useGlobalContext();
   const [showNav, setShowNav] = useState(false);
   const closeMenu = () => setShowNav(false);
 
@@ -17,54 +19,63 @@ function Header() {
         />
 
         {/* User profile picture */}
-        {/* <i className="ml-4 fa-solid fa-circle-user text-2xl" /> */}
+        { user && <i className="ml-4 fa-solid fa-circle-user text-2xl" />}
       </div>
 
       {/* Destkop Navigation links */}
-      <ul className="hidden w-2/4 justify-around items-center font-semibold text-gray-600 text-sm md:flex">
+      <ul className="hidden w-2/4 justify-around items-center font-semibold text-gray-600 text-sm md:flex md:w-3/4 lg:w-2/4">
         <NavLink
           to="/"
-          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+          className={(isActive) => `${isActive.isActive && 'text-lg text-black'}`}
         >
           <li>
             Explore
           </li>
         </NavLink>
+
+        { user && (
         <NavLink
           to="/dashboard"
-          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+          className={(isActive) => `${isActive.isActive && 'text-lg text-black'}`}
         >
           <li>
             Dashboard
           </li>
         </NavLink>
+        )}
+
+        { !user && (
         <NavLink
           to="/signup"
-          className={(isActive) => `${isActive.isActive ? 'text-xl text-blue-400' : 'text-purple-400'}`}
+          className={(isActive) => `${isActive.isActive ? 'text-lg text-black' : 'text-purple-400'}`}
         >
           <li>
             Sign up!
           </li>
         </NavLink>
+        )}
+
         <NavLink
           to="/how-it-works"
-          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+          className={(isActive) => `${isActive.isActive && 'text-lg text-black'}`}
         >
           <li>
             How it works
           </li>
         </NavLink>
+
         <NavLink
           to="/about"
-          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+          className={(isActive) => `${isActive.isActive && 'text-lg text-black'}`}
         >
           <li>
             About us
           </li>
         </NavLink>
+
         <NavLink
           to="/contact"
-          className={(isActive) => `${isActive.isActive && 'text-xl text-blue-400'}`}
+          className={(isActive) => `${isActive.isActive && 'text-lg text-black'}`}
         >
           <li>
             Contact us

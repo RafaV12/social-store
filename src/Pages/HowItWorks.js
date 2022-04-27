@@ -21,17 +21,18 @@ function HowItWorks() {
       >
         <div className="w-72 text-center">
           <p className="uppercase font-bold text-4xl">How it Works</p>
-          <p className="mt-1 text-sm">There are only 4 easy steps to get your new social media account.</p>
+          <p className="mt-1 text-sm">There are only 5 easy steps to get your new social media account.</p>
         </div>
       </div>
 
       {/* Steps Container */}
       <div className="p-6 pt-16 flex flex-col items-center container md:px-7">
         {/* Step 1 */}
-        <div className="mb-14 flex flex-col md:flex-row md:items-center">
-          <img src={step1} alt="" className="h-80 w-64 self-center" />
-          <div className="md:-mt-10">
-            <span className="text-2xl font-bold">1.</span>
+        <div className="mb-14 flex flex-col md:flex-row md:items-center md:justify-between">
+          <img src={step1} alt="" className="h-80 w-64 self-center md:w-1/3" />
+          <div className="hidden h-14 w-14 text-2xl tracking-wider font-bold rounded-lg shadow-md md:flex md:justify-center md:items-center">1.</div>
+          <div className="md:-mt-10 md:w-1/3">
+            <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
             <p className="mt-2">
               Once you choose your account among 12 different categories, you can hit
@@ -41,10 +42,11 @@ function HowItWorks() {
         </div>
 
         {/* Step 2 */}
-        <div className="mb-14 flex flex-col md:flex-row md:items-center">
-          <img src={step2} alt="" className="w-full self-center md:order-last md:w-2/4" />
-          <div className="md:-mt-10">
-            <span className="text-2xl font-bold">2.</span>
+        <div className="mb-14 flex flex-col md:flex-row md:items-center md:justify-between">
+          <img src={step2} alt="" className="h-80 w-64 self-center md:w-1/3 md:order-last" />
+          <div className="hidden h-14 w-14 text-2xl tracking-wider font-bold rounded-lg shadow-md md:flex md:justify-center md:items-center md:order-2">2.</div>
+          <div className="md:-mt-10 md:w-1/3 md:order-1">
+            <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
             <p className="mt-2">
               Once you choose your account among 12 different categories, you can hit
@@ -54,11 +56,11 @@ function HowItWorks() {
         </div>
 
         {/* Step 3 */}
-        <div className="mb-14 flex flex-col md:flex-row md:items-center">
-          <img src={step3} alt="" className="h-80 w-64 self-center" />
-          <div>
-
-            <span className="text-2xl font-bold">3.</span>
+        <div className="mb-14 flex flex-col md:flex-row md:items-center md:justify-between">
+          <img src={step3} alt="" className="h-80 w-64 self-center md:w-1/3" />
+          <div className="hidden h-14 w-14 text-2xl tracking-wider font-bold rounded-lg shadow-md md:flex md:justify-center md:items-center">3.</div>
+          <div className="md:-mt-10 md:w-1/3">
+            <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
             <p className="mt-2">
               Once you choose your account among 12 different categories, you can hit
@@ -68,10 +70,11 @@ function HowItWorks() {
         </div>
 
         {/* Step 4 */}
-        <div className="mb-14 flex flex-col md:flex-row md:items-center">
-          <img src={step4} alt="" className="h-80 w-64 self-center md:order-last" />
-          <div>
-            <span className="text-2xl font-bold">4.</span>
+        <div className="mb-14 flex flex-col md:flex-row md:items-center md:justify-between">
+          <img src={step4} alt="" className="h-80 w-64 self-center md:w-1/3 md:order-last" />
+          <div className="hidden h-14 w-14 text-2xl tracking-wider font-bold rounded-lg shadow-md md:flex md:justify-center md:items-center md:order-2">4.</div>
+          <div className="md:-mt-10 md:w-1/3 md:order-1">
+            <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
             <p className="mt-2">
               Once you choose your account among 12 different categories, you can hit
@@ -81,11 +84,11 @@ function HowItWorks() {
         </div>
 
         {/* Step 5 */}
-        <div className="mb-14 flex flex-col md:flex-row md:items-center">
-          <img src={step5} alt="" className="h-80 w-64 self-center md:mr-4" />
-          <div>
-
-            <span className="text-2xl font-bold">5.</span>
+        <div className="mb-14 flex flex-col md:flex-row md:items-center md:justify-between">
+          <img src={step5} alt="" className="h-80 w-64 self-center md:w-1/3" />
+          <div className="hidden h-14 w-14 text-2xl tracking-wider font-bold rounded-lg shadow-md md:flex md:justify-center md:items-center">5.</div>
+          <div className="md:-mt-10 md:w-1/3">
+            <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
             <p className="mt-2">
               Once you choose your account among 12 different categories, you can hit
