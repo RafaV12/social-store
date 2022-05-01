@@ -15,7 +15,7 @@ function Contact() {
         >
           <div className="w-72 text-center">
             <p className="uppercase font-bold text-4xl">Contact us</p>
-            <p className="mt-1 text-sm">Please, contact us if you have any questions. We will get to you within 24hrs.</p>
+            <p className="mt-1 text-sm text-gray-600">Please, contact us if you have any questions. We will get to you within 24hrs.</p>
           </div>
         </div>
 

@@ -23,7 +23,7 @@ function Header() {
       </div>
 
       {/* Destkop Navigation links */}
-      <ul className="hidden w-2/4 justify-around items-center font-semibold text-gray-600 text-sm md:flex md:w-3/4 lg:w-2/4">
+      <ul className="hidden w-2/4 justify-around items-center font-semibold text-gray-600 text-sm md:flex lg:w-2/4">
         <NavLink
           to="/"
           className={(isActive) => `${isActive.isActive && 'text-lg text-black'}`}
@@ -40,17 +40,6 @@ function Header() {
         >
           <li>
             Dashboard
-          </li>
-        </NavLink>
-        )}
-
-        { !user && (
-        <NavLink
-          to="/signup"
-          className={(isActive) => `${isActive.isActive ? 'text-lg text-black' : 'text-purple-400'}`}
-        >
-          <li>
-            Sign up!
           </li>
         </NavLink>
         )}
@@ -82,6 +71,24 @@ function Header() {
           </li>
         </NavLink>
       </ul>
+
+      { !user && (
+      <div className="hidden items-center md:flex">
+        <NavLink
+          to="/signup"
+          className="py-1 px-4 mr-2 bg-purple-500 text-white text-sm border rounded-full"
+        >
+          Sign up
+        </NavLink>
+        <NavLink
+          to="/login"
+          className="py-1 px-5 mr-2 border border-purple-500 text-purple-500 font-semibold text-sm rounded-full"
+        >
+          Login
+        </NavLink>
+
+      </div>
+      )}
 
       {/* Logo */}
       <NavLink to="/">

@@ -17,13 +17,12 @@ function Login() {
 
   return (
     <div
-      className="min-h-screen flex"
+      className="min-h-screen flex md:justify-center xl:items-center"
     >
       <div
-        style={{ maxWidth: '1300px' }}
-        className="p-8 w-full flex flex-col 2xl:items-center 2xl:justify-center"
+        className="p-8 mt-14 container w-full flex flex-col md:w-3/5"
       >
-        <p className="mt-8 text-3xl font-bold mb-10">Log in</p>
+        <p className="text-3xl font-bold mb-10">Log in</p>
 
         <form onSubmit={onSubmit} className="pb-2 w-full h-full flex flex-col">
           <div className="flex flex-col">
@@ -36,7 +35,7 @@ function Login() {
               name="username"
               value={values.username}
               onChange={handleChange}
-              className="pl-4 mb-3 h-10 w-full rounded-lg"
+              className="mt-2 pl-4 mb-4 h-10 w-full rounded-lg input-bg-color"
               required
             />
 
@@ -48,7 +47,7 @@ function Login() {
               name="password"
               value={values.password}
               onChange={handleChange}
-              className="pl-4 h-10 w-full rounded-lg"
+              className="mt-2 pl-4 h-10 w-full rounded-lg input-bg-color"
               placeholder="Enter Password"
               required
             />
