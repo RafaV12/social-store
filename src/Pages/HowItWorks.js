@@ -35,7 +35,7 @@ function HowItWorks() {
           <div className="md:-mt-10 md:w-1/3">
             <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
-            <p className="mt-2">
+            <p className="mt-2 text-gray-600">
               Once you choose your account among 12 different categories, you can hit
               the buy now button or drop your offer.
             </p>
@@ -49,7 +49,7 @@ function HowItWorks() {
           <div className="mt-2 md:-mt-10 md:w-1/3 md:order-1">
             <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
-            <p className="mt-2">
+            <p className="mt-2 text-gray-600">
               Once you choose your account among 12 different categories, you can hit
               the buy now button or drop your offer.
             </p>
@@ -63,7 +63,7 @@ function HowItWorks() {
           <div className="md:-mt-10 md:w-1/3">
             <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
-            <p className="mt-2">
+            <p className="mt-2 text-gray-600">
               Once you choose your account among 12 different categories, you can hit
               the buy now button or drop your offer.
             </p>
@@ -77,7 +77,7 @@ function HowItWorks() {
           <div className="md:-mt-10 md:w-1/3 md:order-1">
             <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
-            <p className="mt-2">
+            <p className="mt-2 text-gray-600">
               Once you choose your account among 12 different categories, you can hit
               the buy now button or drop your offer.
             </p>
@@ -91,7 +91,7 @@ function HowItWorks() {
           <div className="md:-mt-10 md:w-1/3">
             <span className="text-2xl font-bold md:hidden">1.</span>
             <h3 className="text-2xl font-bold">Buy the account or drop your offer</h3>
-            <p className="mt-2">
+            <p className="mt-2 text-gray-600">
               Once you choose your account among 12 different categories, you can hit
               the buy now button or drop your offer.
             </p>

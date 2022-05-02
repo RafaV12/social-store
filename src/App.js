@@ -12,6 +12,7 @@ import HowItWorks from './Pages/HowItWorks';
 import NotFound from './Pages/NotFound';
 import ProtectedRoutes from './ProtectedRoutes';
 import ScrollToTop from './Components/ScrollToTop';
+import UserProfile from './Pages/UserProfile';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
         </Route>
         <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/user/:id" element={<UserProfile />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />

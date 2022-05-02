@@ -5,7 +5,7 @@ function Reviews() {
     <div className="px-4 pb-14 pt-7 container flex flex-col md:px-7">
       <div className="flex flex-col">
         <h2 className="text-3xl mb-6">Customer Reviews</h2>
-        <p className="mb-6">
+        <p className="mb-6 text-gray-700">
           We are proud of our outstanding service when it comes to selling Instagram accounts.
           Only don't take our word, see our clients experience with us.
         </p>

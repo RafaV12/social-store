@@ -20,6 +20,8 @@ function Home() {
         setShowTopBtn(false);
       }
     });
+
+    return () => console.log('Cleanup');
   }, []);
 
   return (

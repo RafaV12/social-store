@@ -8,22 +8,30 @@ import Footer from '../Components/Footer';
 function Product() {
   const params = useParams();
   const [loading, setLoading] = useState(true);
-  const [error, setErorr] = useState(false);
+  const [error, setError] = useState(false);
   const [account, setAccount] = useState({});
 
   useEffect(() => {
+    const abortCont = new AbortController();
+
     const getAccount = () => {
-      fetch(`https://dummyjson.com/products/${params.id}`)
+      fetch(`https://dummyjson.com/products/${params.id}`, { signal: abortCont.signal })
         .then((res) => res.json())
         .then((json) => {
           setLoading(false);
           setAccount(json);
-        }).catch(() => {
-          setLoading(false);
-          setErorr(true);
+        }).catch((err) => {
+          if (err.name === 'AbortError') {
+            console.log('Fetch Aborted');
+          } else {
+            setLoading(false);
+            setError(true);
+          }
         });
     };
     getAccount();
+
+    return () => abortCont.abort();
   }, []);
 
   if (loading) {

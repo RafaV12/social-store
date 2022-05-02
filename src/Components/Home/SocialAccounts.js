@@ -15,18 +15,26 @@ function SocialAccounts() {
   };
 
   useEffect(() => {
+    const abortCont = new AbortController();
+
     const getAccounts = () => {
-      fetch('https://dummyjson.com/products')
+      fetch('https://dummyjson.com/products', { signal: abortCont.signal })
         .then((res) => res.json())
         .then((json) => {
           setLoading(false);
           setAccounts(json.products);
-        }).catch(() => {
-          setLoading(false);
-          setError(true);
+        }).catch((err) => {
+          if (err.name === 'AbortError') {
+            console.log('Fetch Aborted');
+          } else {
+            setLoading(false);
+            setError(true);
+          }
         });
     };
     getAccounts();
+
+    return () => abortCont.abort();
   }, []);
 
   if (loading) {
@@ -48,23 +56,32 @@ function SocialAccounts() {
       {/* Accounts for sale container */}
       <div className="w-full container mt-5 flex justify-center flex-wrap md:self-center">
         {accounts.slice(0, accsPerPage).map((acc) => (
-          <Link to={`/account/${acc.id}`} key={acc.id}>
+          <div
+            key={acc.id}
+            className="m-1 p-3 h-80 w-48 overflow-y-hidden bg-white rounded-lg shadow"
+          >
             <div
-              className="m-1 p-3 h-80 w-48 overflow-y-hidden bg-white rounded-lg shadow"
+              style={{
+                backgroundImage: 'url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")',
+              }}
+              className="relative h-40 w-full"
             >
-              <img
-                src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                alt=""
-                className="h-40 w-full"
-              />
+
+              {/* Account's Owner */}
+              <Link to="/user/1" className="absolute bottom-2 left-2 flex items-center">
+                <div className="mr-2 h-7 w-7 rounded-full bg-gray-200" />
+                <p className="text-gray-200 text-sm">Account Owner</p>
+              </Link>
+            </div>
+            <Link to={`/account/${acc.id}`}>
               <div className="mt-2 px-1 text-center">
                 <p>{acc.title}</p>
                 <p>{acc.category}</p>
                 <p>{`$${acc.price}`}</p>
                 <p>subs/followers</p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
       <button
