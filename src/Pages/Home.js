@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import LandingPage from '../Components/Home/LandingPage';
 import SocialSlider from '../Components/Home/SocialSlider';
 import SocialAccounts from '../Components/Home/SocialAccounts';
@@ -10,25 +10,29 @@ import ScrollTopBtn from '../Components/ScrollTopBtn';
 function Home() {
   // Scroll to Top button
   const [showTopBtn, setShowTopBtn] = useState(false);
+  // Scroll to Social Slider component using the landing page button
+  const socialSliderRef = useRef(null);
+  const scrollToElement = () => socialSliderRef.current.scrollIntoView({ behavior: 'smooth' });
 
   useEffect(() => {
-    // This NEEDS a clean up func!
-    window.addEventListener('scroll', () => {
+    const displayBtn = () => {
       if (window.scrollY > 100) {
         setShowTopBtn(true);
       } else {
         setShowTopBtn(false);
       }
-    });
+    };
 
-    return () => console.log('Cleanup');
+    window.addEventListener('scroll', displayBtn);
+
+    return () => window.removeEventListener('scroll', displayBtn);
   }, []);
 
   return (
     <>
       <div className="flex flex-col 2xl:items-center">
-        <LandingPage />
-        <SocialSlider />
+        <LandingPage scrollToElement={scrollToElement} />
+        <SocialSlider socialSliderRef={socialSliderRef} />
         <SocialAccounts />
         <TextContent />
         <Reviews />

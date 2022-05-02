@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LandingPage() {
+function LandingPage({ scrollToElement }) {
   return (
     <div
       style={{
@@ -18,7 +18,7 @@ function LandingPage() {
           We filter all the social media accounts for sale to make sure you get real followers
           who engage with your content
         </p>
-        <button className="py-2 mt-7 w-64 lp-button text-white outline-none rounded-full cursor-pointer" type="button">Let's Start!</button>
+        <button onClick={scrollToElement} className="py-2 mt-7 w-64 lp-button text-white outline-none rounded-full cursor-pointer" type="button">Let's Start!</button>
       </div>
     </div>
   );

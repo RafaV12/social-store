@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SocialSlider() {
+function SocialSlider({ socialSliderRef }) {
   return (
     <>
       <p
@@ -8,7 +8,7 @@ function SocialSlider() {
       >
         Select a social network
       </p>
-      <div className="mt-3 py-2 pl-3 w-full container flex overflow-x-auto items-center hide-scrollbar md:pl-7">
+      <div ref={socialSliderRef} className="mt-3 py-2 pl-3 w-full container flex overflow-x-auto items-center hide-scrollbar md:pl-7">
         {/* Youtube */}
         <div className="m-2 p-2 h-16 min-w-max border flex flex-col justify-around bg-white rounded-lg transform transition duration-500 hover:scale-105 shadow-md cursor-pointer">
           <img

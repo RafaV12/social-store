@@ -51,10 +51,10 @@ function UserProfile() {
     );
   }
   return (
-    <div className="px-4 py-16 min-h-screen">
+    <div className="px-4 py-16 min-h-screen flex flex-col items-center">
 
       {/* User Info */}
-      <div>
+      <div className="container md:mt-7 md:flex md:flex-col md:items-center">
         <img src={userValues.avatar} alt="" className="h-28 w-28 rounded-lg" />
         <div className="mt-5 flex items-center">
           <h1 className="text-4xl font-bold text-gray-800">{userValues.username}</h1>
@@ -65,8 +65,8 @@ function UserProfile() {
         </div>
         <p className="mt-1 text-gray-600">{userValues.userDesc}</p>
         {/* CTA Section */}
-        <div className="mt-5 w-full flex justify-between items-center">
-          <div className="py-3 w-3/5 flex justify-center items-center text-white bg-purple-400 rounded-lg">
+        <div className="mt-5 w-full flex items-center md:justify-center">
+          <div className="py-3 px-6 mr-7 flex justify-center items-center text-white bg-purple-400 rounded-lg">
             <p>Items sold</p>
             <p className="mx-4">|</p>
             <p>{userValues.itemsSold}</p>
@@ -75,15 +75,18 @@ function UserProfile() {
         </div>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-4 container">
         <p className="font-semibold text-lg">Accounts for sale</p>
 
         {/* Accounts for Sale Container */}
-        <div className="mt-5">
+        <div className="mt-5 md:flex md:flex-wrap">
           <div
-            className="p-4 mb-4 w-full h-48 rounded-lg"
+            className="p-4 mb-4 w-full h-48 rounded-lg md:mx-2 md:w-56 lg:w-80"
             style={{
               backgroundImage: 'url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
             }}
           >
             <div>
@@ -95,9 +98,12 @@ function UserProfile() {
           </div>
 
           <div
-            className="p-4 mb-4 w-full h-48 rounded-lg"
+            className="p-4 mb-4 w-full h-48 rounded-lg md:mx-2 md:w-56 lg:w-80"
             style={{
               backgroundImage: 'url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
             }}
           >
             <div>
@@ -109,9 +115,12 @@ function UserProfile() {
           </div>
 
           <div
-            className="p-4 mb-4 w-full h-48 rounded-lg"
+            className="p-4 mb-4 w-full h-48 rounded-lg md:mx-2 md:w-56 lg:w-80"
             style={{
               backgroundImage: 'url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
             }}
           >
             <div>
